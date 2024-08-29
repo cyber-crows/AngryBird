@@ -5,10 +5,10 @@ size(500,500);
 void draw()
 {
 //background(169,169,169);
-line(mouseX, mouseY, mouseX, mouseY);
+//line(mouseX, mouseY, mouseX, mouseY);
 //noStroke();
-fill(0,0,0);
-text(mouseX+ "," + mouseY,20,20);
+//fill(0,0,0);
+//text(mouseX+ "," + mouseY,20,20);
 
 fill(216,0,38);
 ellipse(210,360,40,95); //legs
