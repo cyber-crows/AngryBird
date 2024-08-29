@@ -4,7 +4,7 @@ size(500,500);
 }
 void draw()
 {
-background(169,169,169);
+//background(169,169,169);
 line(mouseX, mouseY, mouseX, mouseY);
 //noStroke();
 fill(0,0,0);
