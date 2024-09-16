@@ -1,0 +1,50 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
+int mX=0;
+int x=250;
+int avatar_control=10;
+PImage chan ;
+//PImage guy ;
+void setup() {
+arduino = new Arduino(this, Arduino.list()[0], 57600);
+  size (500,500);
+
+}
+
+
+void draw ()  {
+//background(0);
+background(203,189,147);
+//guy= loadImage("cardinal_mascotv2.png");
+chan= loadImage("mr_chanv33.png");
+int left_control = arduino.analogRead(1);
+int right_control = arduino.analogRead(6);
+
+if(left_control>500){
+//image(guy,avatar_control+mX,150,400,400);
+image(chan,x+mX,100);  
+mX-=20;
+}
+if(right_control>0) {
+//image(guy,avatar_control+mX,150,400,400);
+image(chan,x+mX,100);  
+
+mX+=20;
+}
+else {
+//image(guy,avatar_control,150,400,400);
+image(chan,x+mX,100); 
+
+//fill(255,0,0);
+//rect(250,250,130,100);
+
+}
+//print(x_control+"stop");
+//print(y_control+"tttt");
+
+
+
+   //image(chan,x_control,y_control);
+
+}
